@@ -3,38 +3,68 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Route After Delay</title>
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-    crossorigin=""
-  />
+  <title>Route After Delay (Google Maps)</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Top search bar like Google Maps */
+    .searchbar {
+      display: flex;
+      gap: 8px;
+      padding: 8px 16px;
+      background: var(--panel);
+      border-bottom: 1px solid #1f2937;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .searchbar input {
+      flex: 1 1 280px;
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: 1px solid #374151;
+      background: #0b1220;
+      color: var(--text);
+      outline: none;
+    }
+    .mode-select {
+      padding: 8px 10px;
+      border-radius: 8px;
+      border: 1px solid #374151;
+      background: #0b1220;
+      color: var(--text);
+    }
+  </style>
 </head>
 <body>
   <header>
     <h1>Show Route After Delay</h1>
   </header>
 
+  <div class="searchbar">
+    <input id="startInput" type="text" placeholder="Choose starting point" />
+    <input id="endInput" type="text" placeholder="Choose destination" />
+    <select id="travelMode" class="mode-select" title="Travel mode">
+      <option value="DRIVING" selected>Driving</option>
+      <option value="WALKING">Walking</option>
+      <option value="BICYCLING">Bicycling</option>
+      <option value="TRANSIT">Transit</option>
+    </select>
+    	<label for="delayMinutes">Delay (min)</label>
+    	<input id="delayMinutes" type="number" min="0" step="1" value="1" />
+    	<button id="showRoute" class="success">Show After Delay</button>
+    	<button id="reset" class="secondary">Reset</button>
+  </div>
+
   <main>
     <section class="controls">
       <div class="pickers">
-        <button id="pickStart" class="primary">Pick Start</button>
+        <button id="pickStart" class="primary">Pick Start on Map</button>
         <span id="startDisplay" class="coord">Start: not set</span>
-        <button id="pickEnd" class="primary">Pick End</button>
+        <button id="pickEnd" class="primary">Pick End on Map</button>
         <span id="endDisplay" class="coord">End: not set</span>
       </div>
 
-      	<div class="delay">
-        	<label for="delayMinutes">Delay (minutes):</label>
-        	<input id="delayMinutes" type="number" min="0" step="1" value="1" />
-        	<button id="showRoute" class="success">Show Route After Delay</button>
-        	<button id="reset" class="secondary">Reset</button>
-      	</div>
-
       <div class="status">
-        <span id="statusText">Pick start and end points by clicking the buttons and then the map.</span>
+        <span id="statusText">Type in the boxes or pick points on the map, set a delay, then click Show.</span>
         <span id="countdown"></span>
       </div>
     </section>
@@ -46,16 +76,13 @@
 
   <footer>
     <small>
-      Routing by <a href="https://project-osrm.org/" target="_blank" rel="noopener">OSRM</a>, map by <a href="https://www.openstreetmap.org/" target="_blank" rel="noopener">OpenStreetMap</a> via Leaflet.
+      Map, Places, and Directions by Google Maps Platform.
     </small>
   </footer>
 
-  <script
-    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-    crossorigin=""
-  ></script>
-  <script src="app.js"></script>
+  <!-- Replace YOUR_GOOGLE_MAPS_API_KEY with your actual key -->
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbZUf1iz3W56fLkKzdfdfwRUKag2_9m-g&libraries=places&callback=initMap"></script>
+  <script src="app_gmaps.js"></script>
 </body>
 </html>
 
