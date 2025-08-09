@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Route After Delay</title>
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Show Route After Delay</h1>
+  </header>
+
+  <main>
+    <section class="controls">
+      <div class="pickers">
+        <button id="pickStart" class="primary">Pick Start</button>
+        <span id="startDisplay" class="coord">Start: not set</span>
+        <button id="pickEnd" class="primary">Pick End</button>
+        <span id="endDisplay" class="coord">End: not set</span>
+      </div>
+
+      	<div class="delay">
+        	<label for="delayMinutes">Delay (minutes):</label>
+        	<input id="delayMinutes" type="number" min="0" step="1" value="1" />
+        	<button id="showRoute" class="success">Show Route After Delay</button>
+        	<button id="reset" class="secondary">Reset</button>
+      	</div>
+
+      <div class="status">
+        <span id="statusText">Pick start and end points by clicking the buttons and then the map.</span>
+        <span id="countdown"></span>
+      </div>
+    </section>
+
+    <section class="map-wrap">
+      <div id="map"></div>
+    </section>
+  </main>
+
+  <footer>
+    <small>
+      Routing by <a href="https://project-osrm.org/" target="_blank" rel="noopener">OSRM</a>, map by <a href="https://www.openstreetmap.org/" target="_blank" rel="noopener">OpenStreetMap</a> via Leaflet.
+    </small>
+  </footer>
+
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""
+  ></script>
+  <script src="app.js"></script>
+</body>
+</html>
+
