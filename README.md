@@ -1,96 +1,58 @@
 <img width="3188" height="1202" alt="frame (3)" src="https://github.com/user-attachments/assets/517ad8e9-ad22-457d-9538-a9e62d137cd7" />
 
 
-# [Project Name] 🎯
+# Better than Never
 
 
 ## Basic Details
-### Team Name: [Name]
+### Team Name: Gotham
 
 
 ### Team Members
-- Team Lead: [Name] - [College]
-- Member 2: [Name] - [College]
-- Member 3: [Name] - [College]
+- Team Lead: Joseph Sajan - SCMS School of Engineering and Technology
+- Member 2: Eshaan James  - SCMS School of Engineering and Technology
 
 ### Project Description
-[2-3 lines about what your project does]
+You have to get someplace but there is no way you're getting there early, your wayy too cool to reach on time or you really don't want to go or let's say the host isn't exactly on your good side. How are you gonna be late without an over-complicated explanation of whys?
+A map that will take you where you want to go with a slight delay
+
 
 ### The Problem (that doesn't exist)
-[What ridiculous problem are you solving?]
+Google maps gives you the fastest and shortest route to any destination 
 
 ### The Solution (that nobody asked for)
-[How are you solving it? Keep it fun!]
+Add an extra few hours to the mix so now it's Google maps that made you late by taking the longest route available.
+With an API integration,Google maps is going to be a solution to all the hassles that come with showing up late to an event or destination.
+Would you make it on time? Sure with only a 2 hours setback cause "Google maps" showed me the "wrong" route.
 
 ## Technical Details
 ### Technologies/Components Used
 For Software:
-- [Languages used]
-- [Frameworks used]
-- [Libraries used]
-- [Tools used]
+- Languages: HTML
+- Frameworks: Leaflet Routing Machine
+- Libraries: Leaflet.js for map interactivity, OpenStreetMap for map tiles, Nominatim API for geocoding
+- Tools: VS Code, Figma
 
-For Hardware:
-- [List main components]
-- [List specifications]
-- [List tools required]
+
 
 ### Implementation
 For Software:
-# Installation
-[commands]
 
 # Run
-[commands]
+Just run the HTML file
 
-### Project Documentation
-For Software:
+# Screenshots
+![WhatsApp Image 2025-08-09 at 07 21 19_43a36145](https://github.com/user-attachments/assets/c96b04bf-b824-4540-ab2e-e2d2910a3d2e)
+as you can see to get the destination route we need to wait until the timmer runs out 
 
-# Screenshots (Add at least 3)
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+![WhatsApp Image 2025-08-09 at 07 29 38_0907e781](https://github.com/user-attachments/assets/6800139f-7048-4656-a66d-48de4d799dbc)
+this is the final outcome after the timmer finishes
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
-
-# Diagrams
-![Workflow](Add your workflow/architecture diagram here)
-*Add caption explaining your workflow*
-
-For Hardware:
-
-# Schematic & Circuit
-![Circuit](Add your circuit diagram here)
-*Add caption explaining connections*
-
-![Schematic](Add your schematic diagram here)
-*Add caption explaining the schematic*
-
-# Build Photos
-![Components](Add photo of your components here)
-*List out all components shown*
-
-![Build](Add photos of build process here)
-*Explain the build steps*
-
-![Final](Add photo of final product here)
-*Explain the final build*
-
-### Project Demo
-# Video
-[Add your demo video link here]
-*Explain what the video demonstrates*
-
-# Additional Demos
-[Add any extra demo materials/links]
 
 ## Team Contributions
-- [Name 1]: [Specific contributions]
-- [Name 2]: [Specific contributions]
-- [Name 3]: [Specific contributions]
+- Joseph Sajan: API integration
+- Eshan James: UI/Ux
 
 ---
 Made with ❤️ at TinkerHub Useless Projects 
